@@ -27,8 +27,8 @@ let currentSessionId: string | null = null;
 
 // 命令行界面配置
 program
-  .name('claude-code-poc')
-  .description('Claude Code POC - 基于核心设计理念的小型版本')
+  .name('fupaw-poc')
+  .description('FuPaw POC - 基于核心设计理念的小型版本')
   .version(config.APP_VERSION);
 
 // 启动交互式会话
@@ -44,7 +44,7 @@ program
     // 创建新会话
     currentSessionId = queryEngine.createSession();
     console.log(chalk.blue(`会话已创建，ID: ${currentSessionId}`));
-    console.log(chalk.green('欢迎使用 Claude Code POC！输入你的问题，或输入 exit 退出。'));
+    console.log(chalk.green('欢迎使用 FuPaw POC！输入你的问题，或输入 exit 退出。'));
 
     // 创建 readline 接口
     const rl = readline.createInterface({
@@ -70,7 +70,7 @@ program
         // 显示结果
         for (const message of messages) {
           if (message.role === 'assistant') {
-            console.log(chalk.green('Claude:'));
+            console.log(chalk.green('FuPaw:'));
             console.log(message.content);
           } else if (message.role === 'tool') {
             console.log(chalk.cyan('工具执行:'));
@@ -115,16 +115,16 @@ program
       const messages = await queryEngine.processUserInput(sessionId, query);
       
       // 显示结果
-      for (const message of messages) {
-        if (message.role === 'assistant') {
-          console.log(chalk.green('Claude:'));
-          console.log(message.content);
-        } else if (message.role === 'tool') {
-          console.log(chalk.cyan('工具执行:'));
-          console.log(`工具: ${message.tool_name}`);
-          console.log(`结果: ${message.content}`);
+        for (const message of messages) {
+          if (message.role === 'assistant') {
+            console.log(chalk.green('FuPaw:'));
+            console.log(message.content);
+          } else if (message.role === 'tool') {
+            console.log(chalk.cyan('工具执行:'));
+            console.log(`工具: ${message.tool_name}`);
+            console.log(`结果: ${message.content}`);
+          }
         }
-      }
     } catch (error) {
       console.error(chalk.red('错误:', error instanceof Error ? error.message : error));
     } finally {

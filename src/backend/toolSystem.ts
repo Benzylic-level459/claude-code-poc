@@ -148,6 +148,16 @@ export class ToolRegistry {
     this.registerTool(new FileReadTool());
     this.registerTool(new FileWriteTool());
     this.registerTool(new BashTool());
+    
+    // 注册任务和内存工具
+    try {
+      const { TaskCreateTool } = require('../tools/TaskCreateTool');
+      const { MemoryTool } = require('../tools/MemoryTool');
+      this.registerTool(new TaskCreateTool());
+      this.registerTool(new MemoryTool());
+    } catch (error) {
+      console.warn('Failed to load additional tools:', error);
+    }
   }
 
   // 注册工具

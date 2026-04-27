@@ -1,7 +1,7 @@
 {
-  "name": "claude-code-poc",
+  "name": "fupaw-poc",
   "version": "1.0.0",
-  "description": "Claude Code POC项目 - 基于核心设计理念的小型版本",
+  "description": "FuPaw POC项目 - 基于核心设计理念的小型版本",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -27,6 +27,6 @@
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   },
-  "author": "Claude Code Team",
+  "author": "FuPaw Team",
   "license": "MIT"
 }
